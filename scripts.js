@@ -53,6 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
             header.classList.remove("sticky");
         }
     });
+document.getElementById('loadBooks').addEventListener('click', () => {
+    fetch('http://localhost:5000/api/books')
+        .then(response => response.json())
+        .then(data => {
+            const booksList = document.getElementById('books-list');
+            data.forEach(book => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${book.title} by ${book.author}`;
+                booksList.appendChild(listItem);
+            });
+        })
+        .catch(err => console.log('Error fetching books:', err));
+});
 
     // Fetch books data from the backend API and display it
     fetch('http://localhost:5000/api/books')
