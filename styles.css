@@ -1014,3 +1014,114 @@ body {
         flex: 1 1 100%;
     }
 }
+/* General Responsive Adjustments */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Navbar Adjustments for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+
+    .navbar .logo {
+        font-size: 1.5rem;
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar nav {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .navbar nav a {
+        display: inline-block;
+        margin: 10px 5px;
+        font-size: 0.9rem;
+    }
+
+    .navbar .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Hero Section Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero .btn-primary {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Card Layout Adjustments */
+@media (max-width: 1024px) {
+    .card-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 calc(33% - 20px); /* Display 3 cards per row */
+        max-width: calc(33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Display 2 cards per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex: 1 1 100%; /* Display 1 card per row */
+    }
+}
+
+/* Footer Adjustments */
+@media (max-width: 768px) {
+    .footer h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Optimized Font Sizes for Large Screens */
+@media (min-width: 1400px) {
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero p {
+        font-size: 2rem;
+    }
+
+    .card h2 {
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        font-size: 1.1rem;
+    }
+}
