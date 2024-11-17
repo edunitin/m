@@ -29,27 +29,13 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="feature">
-            <h2>📚 Comprehensive Resources</h2>
-            <p>Access books, guides, and study materials to enhance your learning journey.</p>
-        </div>
-        <div class="feature">
-            <h2>📊 Exam Preparation</h2>
-            <p>Practice mock tests and access tailored resources for your exams.</p>
-        </div>
-        <div class="feature">
-            <h2>📞 24/7 Support</h2>
-            <p>Reach out to us anytime for assistance or queries related to the platform.</p>
-        </div>
+    <!-- Books Section (Fetching Data from API) -->
+    <section class="books-section" id="books-list">
+        <h2>Books List</h2>
+        <ul id="book-list-container">
+            <!-- Books will be dynamically added here -->
+        </ul>
     </section>
-    <section id="books">
-    <h2>Books List</h2>
-    <ul id="books-list"></ul> <!-- List of books will be populated here -->
-</section>
-<button id="loadBooks">Load Books</button>
-
 
     <!-- Footer -->
     <footer id="contact-us" class="footer">
@@ -59,7 +45,40 @@
         <p><strong>Saumik</strong> - Mob: 8979251758</p>
         <p><strong>Devdutt</strong> - Mob: 9258826242</p>
     </footer>
-    <script src="scripts.js"></script>
 
+    <!-- JS Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", (event) => {
+                    const targetID = link.getAttribute("href").slice(1); // Get the target section ID
+                    const targetElement = document.getElementById(targetID);
+                    if (targetElement) {
+                        event.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+
+            // Fetch books from the backend
+            fetch('https://your-backend-url.onrender.com/api/books') // Replace with your deployed backend URL
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);  // Array of books from the backend
+                    const booksContainer = document.getElementById('book-list-container');
+                    data.forEach(book => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${book.title} by ${book.author}`;
+                        booksContainer.appendChild(listItem);
+                    });
+                })
+                .catch(err => console.log('Error fetching books:', err));
+        });
+    </script>
 </body>
 </html>
