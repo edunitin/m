@@ -1246,6 +1246,149 @@ nav a:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0047ab;
+    color: white;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.navbar .btn-primary {
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.navbar .btn-primary:hover {
+    background: #0056b3;
+}
+
+/* About Section Styling */
+.section {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Default width for larger screens */
+    min-width: 280px; /* Ensure proper sizing for smaller screens */
+    box-sizing: border-box;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* Footer Styling */
+.footer {
+    background: #0047ab;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer h2 {
+    font-size: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar .btn-primary {
+        margin-top: 10px;
+    }
+
+    .card {
+        width: 100%; /* Cards take up full width on smaller screens */
+        margin-bottom: 15px;
+    }
+
+    .section h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .logo {
+        font-size: 18px;
+    }
+
+    .section h1 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
 
 
 @tailwind base;
