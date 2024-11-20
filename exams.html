@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exams - Nitin Sharma's Education Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Button styling */
+        .test-button {
+            display: inline-block;
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            padding: 15px 25px;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover animation */
+        .test-button:hover {
+            background-color: #45a049;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section styling */
+        .exams-section {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .in-progress-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Heading styling */
+        .quiz-heading {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,14 +57,17 @@
         <a href="index.html">🏠 Home</a>
         <a href="books.html">📚 Books</a>
         <a href="exams.html">📝 Exams</a>
-         <a href="about.html">About Us</a>
         <a href="contact.html">📞 Contact Us</a>
         <a href="login.html">🔑 Login</a>
     </nav>
     <section class="exams-section">
-        <h2>Coming Soon!</h2>
-        <p>We're working hard to bring exciting exam features. Stay tuned!</p>
-        <img src="images/in-progress.png" alt="In Progress" class="in-progress-image">
+        <h2 class="quiz-heading">Physics Quiz</h2>
+        <p>Click the button below to take the exam on Google Forms.</p>
+        <!-- Button linking to Google Forms -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3rlzzGMO42A37a9ri4DglplHp2WlDseCFQTYJdpKEcxCPZA/viewform?usp=sf_link" target="_blank" class="test-button">
+            Start Your Test 📝
+        </a>
+        <img src="phy.jpg" alt="PHYSICS TEST" class="in-progress-image">
     </section>
     <footer>
         <p>&copy; 2024 Nitin Sharma's Education Portal | All Rights Reserved</p>
