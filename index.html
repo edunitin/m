@@ -1,100 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Welcome - Teacher Nitin Sharma</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo"> Nitin Sharma</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="books.html">Books</a>
-            <a href="exams.html">Exams</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <a class="btn-primary" href="login.html">Login</a>
-    </div>
+  <title>Welcome - Teacher Nitin Sharma</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Base styling for the date sheet buttons */
+    .btn-datesheet {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
+      color: white;
+      animation: colorChange 3s infinite;
+      transition: transform 0.2s;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+    }
 
-  <!-- Add the button in the desired section -->
-<section class="hero">
+    /* Hover effect */
+    .btn-datesheet:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Color-changing animation */
+    @keyframes colorChange {
+      0% {
+        background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
+      }
+      33% {
+        background: linear-gradient(45deg, #ff9e7e, #ffb375, #ffcd45);
+      }
+      66% {
+        background: linear-gradient(45deg, #75ff7e, #45ff85, #3eff63);
+      }
+      100% {
+        background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Nitin Sharma</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="exams.html">Exams</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn-primary" href="login.html">Login</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
     <h1>Welcome to a World of Learning</h1>
     <p>Discover a treasure trove of knowledge and resources to fuel your education.</p>
     <a href="books.html" class="btn-primary">📖 Explore Books</a>
-    <a href="datesheet.html" class="btn-datesheet" onclick="openDateSheet()">📅 Date Sheet ICSE Class 10</a>
-</section>
+    <a href="datesheet.html" class="btn-datesheet" onclick="openDateSheet('icse')">📅 Date Sheet ICSE Class 10</a>
+    <a href="datesheet_cbse.html" class="btn-datesheet" onclick="openDateSheet('cbse')">📅 Date Sheet CBSE Class 10</a>
+  </section>
 
-<!-- Footer remains the same -->
+ 
 
-<!-- Add CSS for the color-changing button -->
-<style>
-/* Base styling for the button */
-.btn-datesheet {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
-    color: white;
-    animation: colorChange 3s infinite;
-    transition: transform 0.2s;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Hover effect */
-.btn-datesheet:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
-}
-
-/* Color-changing animation */
-@keyframes colorChange {
-    0% {
-        background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
-    }
-    33% {
-        background: linear-gradient(45deg, #ff9e7e, #ffb375, #ffcd45);
-    }
-    66% {
-        background: linear-gradient(45deg, #75ff7e, #45ff85, #3eff63);
-    }
-    100% {
-        background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
-    }
-}
-</style>
-
-<!-- JavaScript for opening and downloading the date sheet -->
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <h2>Contact Details</h2>
-        <p>
-               Nitin Sharma
-            📞 Mobile: 9458627703
-            📧 Email: techno00139@gmail.com | |
-            
-            For Site Queries:  
-            Saumik
-            📞 Mobile: 8979251758 | |
-            Devdutt
-            📞 Mobile: 9258826242</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <h2>Contact Details</h2>
+    <p>
+      Nitin Sharma<br>
+      📞 Mobile: 9458627703<br>
+      📧 Email: techno00139@gmail.com
+    </p>
+    <p>
+      For Site Queries:<br>
+      Saumik<br>
+      📞 Mobile: 8979251758<br>
+      Devdutt<br>
+      📞 Mobile: 9258826242
+    </p>
+  </footer>
 </body>
 </html>
