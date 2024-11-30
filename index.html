@@ -100,25 +100,25 @@
   </style>
 </head>
 <body>
- <!-- Navbar -->
+<!-- Navbar -->
 <div class="navbar">
-  <div class="logo">Nitin Sharma</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <nav id="nav-links">
-    <a href="index.html">Home</a>
-    <a href="books.html">Books</a>
-    <a href="exams.html">Exams</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="login.html" class="btn-primary">Login</a>
-  </nav>
+  <div class="menu-button" onclick="toggleMenu()">☰ Menu</div>
+  <div id="nav-menu">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="exams.html">Exams</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn-primary">Login</a>
+    </nav>
+  </div>
 </div>
 
 <style>
   /* General Navbar Styling */
   .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
@@ -128,31 +128,65 @@
     z-index: 1000;
   }
 
-  .navbar .logo {
-    font-size: 1.5rem;
+  /* Menu Button for Mobile */
+  .menu-button {
+    font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
   }
 
-  nav {
+  .menu-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffd1dc;
+  }
+
+  /* Hidden Navigation Menu */
+  #nav-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  #nav-menu nav {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  nav a {
+  #nav-menu nav a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transition: color 0.3s;
   }
 
-  nav a:hover {
+  #nav-menu nav a:hover {
     color: #ffd1dc;
+  }
+
+  #nav-menu nav a:last-child {
+    border-bottom: none;
   }
 
   .btn-primary {
     padding: 8px 15px;
     background: white;
-    color: #000000e1;
+    color: #ff4563;
     text-decoration: none;
     border-radius: 20px;
     font-weight: bold;
@@ -160,61 +194,64 @@
   }
 
   .btn-primary:hover {
-    background: #58187c;
+    background: #ff4563;
     color: white;
   }
 
-  /* Hamburger Button Styling */
-  .hamburger {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+  /* Mobile View Styling */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+
+    #nav-menu {
+      display: none;
+    }
   }
 
-  /* Mobile Navbar Styling */
-  @media (max-width: 768px) {
-    nav {
+  /* Desktop View Styling */
+  @media (min-width: 769px) {
+    .menu-button {
       display: none;
-      flex-direction: column;
-      gap: 0;
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      padding: 20px 0;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-      text-align: center;
     }
 
-    nav a {
-      padding: 10px 0;
-      font-size: 1.2rem;
-      border-bottom: 1px solid white;
+    #nav-menu {
+      display: block;
+      position: static;
+      background: none;
+      box-shadow: none;
+      padding: 0;
     }
 
-    nav a:last-child {
+    #nav-menu nav {
+      flex-direction: row;
+      gap: 20px;  /* Medium gap between items */
+    }
+
+    #nav-menu nav a {
+      font-size: 1.3rem;  /* Slightly larger but balanced font size */
+      padding: 12px 20px;  /* Medium padding for buttons */
       border-bottom: none;
     }
 
-    .hamburger {
-      display: block;
-      color: white;
-    }
-
-    .nav-active {
-      display: flex !important;
+    #nav-menu nav a:hover {
+      color: #ffd1dc;
     }
   }
 </style>
 
 <script>
-  // Toggle Hamburger Menu for Mobile
+  // Toggle Menu Visibility
   function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('nav-active');
+    const menu = document.getElementById('nav-menu');
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'block';
+    }
   }
 </script>
+
 
 
   <!-- Hero Section -->
