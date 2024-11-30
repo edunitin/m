@@ -100,17 +100,119 @@
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">Nitin Sharma</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="books.html">Books</a>
-      <a href="exams.html">Exams</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <a class="btn-primary" href="login.html">Login</a>
+  <!-- Navbar -->
+<div class="navbar">
+  <div class="logo">Nitin Sharma</div>
+  <nav id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="exams.html">Exams</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn-primary" href="login.html">Login</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
   </div>
+</div>
+
+<style>
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #ffd1dc;
+  }
+
+  .btn-primary {
+    padding: 8px 15px;
+    background: white;
+    color: #ff4563;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .btn-primary:hover {
+    background: #ff4563;
+    color: white;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(255, 69, 99, 0.9);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      padding: 10px 0;
+      font-size: 1.2rem;
+      border-bottom: 1px solid white;
+    }
+
+    nav a:last-child {
+      border-bottom: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+  /* Menu Active State */
+  .nav-active {
+    display: flex !important;
+  }
+</style>
+
+<script>
+  // Toggle Hamburger Menu
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('nav-active');
+  }
+</script>
+
 
   <!-- Hero Section -->
   <section class="hero">
