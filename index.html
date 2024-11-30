@@ -6,6 +6,15 @@
   <title>Welcome - Teacher Nitin Sharma</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* General Body Background */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
     /* Base styling for the date sheet buttons */
     .btn-datesheet {
       display: inline-block;
@@ -44,6 +53,50 @@
         background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff4563);
       }
     }
+
+    /* Hero Section Styling */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      color: white;
+      background: url('edu.jpg') no-repeat center center/cover;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    /* Overlay for better text readability */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2; /* Places content above the overlay */
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.8;
+    }
   </style>
 </head>
 <body>
@@ -61,30 +114,135 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to a World of Learning</h1>
-    <p>Discover a treasure trove of knowledge and resources to fuel your education.</p>
-    <a href="books.html" class="btn-primary">📖 Explore Books</a>
-    <a href="datesheet.html" class="btn-datesheet" onclick="openDateSheet('icse')">📅 Date Sheet ICSE Class 10</a>
-    <a href="datesheet_cbse.html" class="btn-datesheet" onclick="openDateSheet('cbse')">📅 Date Sheet CBSE Class 10</a>
+    <div class="hero-content">
+      <h1>Welcome to a World of Learning</h1>
+      <p>Discover a treasure trove of knowledge and resources to fuel your education.</p>
+      <a href="books.html" class="btn-primary">📖 Explore Books</a>
+      <a href="datesheet.html" class="btn-datesheet" onclick="openDateSheet('icse')">📅 Date Sheet ICSE Class 10</a>
+      <a href="datesheet_cbse.html" class="btn-datesheet" onclick="openDateSheet('cbse')">📅 Date Sheet CBSE Class 10</a>
+    </div>
   </section>
 
- 
+ <!-- Footer -->
+<footer class="footer">
+  <div class="contact-container">
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <p><strong>Nitin Sharma</strong></p>
+      <p>📞 Mobile: 9458627703</p>
+      <p>📧 Email: techno00139@gmail.com</p>
+    </div>
+    <div class="contact-card">
+      <h2>Site Queries</h2>
+      <p><strong>Saumik</strong></p>
+      <p>📞 Mobile: 8979251758</p>
+      <p><strong>Devdutt</strong></p>
+      <p>📞 Mobile: 9258826242</p>
+    </div>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <h2>Contact Details</h2>
-    <p>
-      Nitin Sharma<br>
-      📞 Mobile: 9458627703<br>
-      📧 Email: techno00139@gmail.com
+  <!-- Quote Section -->
+  <div class="quote-bookmark">
+    <p>“Failure is simply the opportunity to begin again, this time more intelligently.”<br> 
+      <span>- Henry Ford</span>
     </p>
-    <p>
-      For Site Queries:<br>
-      Saumik<br>
-      📞 Mobile: 8979251758<br>
-      Devdutt<br>
-      📞 Mobile: 9258826242
-    </p>
-  </footer>
+  </div>
+</footer>
+
+<style>
+  /* Footer Styling */
+  .footer {
+    padding: 40px 20px;
+    background: transparent; /* Removed white background */
+  }
+
+  /* Contact Container */
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Contact Card Styling */
+  .contact-card {
+    background: linear-gradient(45deg, #651470, #ff4563);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .contact-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .contact-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .contact-card strong {
+    font-size: 1.1rem;
+  }
+
+  /* Quote Bookmark Styling */
+  .quote-bookmark {
+    margin: 30px auto;
+    text-align: center;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Gradient styling for bookmark */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+  }
+
+  .quote-bookmark p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .quote-bookmark span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+
+  /* Decorative Bookmark Notch */
+  .quote-bookmark::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    background: white;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+</style>
+
+
+
 </body>
 </html>
