@@ -5,6 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books - Nitin Sharma's Education Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body.books-page {
+            font-family: 'Georgia', serif;
+            background: url('old-books-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4e342e;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #d7ccc8;
+            color: #4e342e;
+            padding: 20px;
+            border-bottom: 5px solid #8d6e63;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #8d6e63;
+            padding: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #5d4037;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #d7ccc8;
+            color: #4e342e;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .books-categories {
+            text-align: center;
+            margin: 40px auto;
+            background-color: rgba(237, 221, 202, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .books-categories h2 {
+            color: #4e342e;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .category-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .category-btn {
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .category-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .icse-btn { background-color: #ffab91; }
+        .cbse-btn { background-color: #ffcc80; }
+        .neet-btn { background-color: #ffe082; }
+        .jee-btn { background-color: #80cbc4; }
+    </style>
 </head>
 <body class="books-page">
     <header>
@@ -17,7 +105,6 @@
         <a href="contact.html">📞 Contact Us</a>
         <a href="login.html">🔑 Login</a>
     </nav>
-    
     <section class="books-categories">
         <h2>Select Your Category</h2>
         <div class="category-container">
