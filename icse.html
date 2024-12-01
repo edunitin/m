@@ -5,10 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICSE Books - Nitin Sharma's Education Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-image: url('old-books-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #4A3F35;
+            margin: 0;
+        }
+        header {
+            background-color: rgba(153, 102, 51, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            font-size: 2rem;
+        }
+        nav {
+            background-color: rgba(102, 51, 0, 0.9);
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .books-list {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 240, 0.9);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .books-list h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #4A3F35;
+            font-size: 1.8rem;
+            text-shadow: 1px 1px #fff;
+        }
+        .book-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #d1c4af;
+        }
+        .book-item h3 {
+            color: #8B4513;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .book-link {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            background-color: #8B4513;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .book-link:hover {
+            background-color: #A0522D;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(102, 51, 0, 0.9);
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>📘 ICSE Books</h1>
+        📘 ICSE Books
     </header>
     <nav>
         <a href="index.html">🏠 Home</a>
@@ -19,15 +95,14 @@
     </nav>
     <section class="books-list">
         <h2>Available ICSE Books</h2>
-        <div class="book-container">
-            <div class="book-item">
-                <h3>All In One Mathematics ICSE Class 10</h3>
-                <a href="All In One Mathematics ICSE Class 10 2022-23 Edition_nodrm_compressed.pdf" target="_blank" class="book-link">📖 Download PDF</a>
-            </div>
-            <div class="book-item">
-                <h3>All In One Physics ICSE Class 10</h3>
-                <a href="All In One Physics ICSE Class 10_compressed.pdf" target="_blank" class="book-link">📖 Download PDF</a>
-            </div>
+        <div class="book-item">
+            <h3>All In One Mathematics ICSE Class 10</h3>
+            <a href="All In One Mathematics ICSE Class 10 2022-23 Edition_nodrm_compressed.pdf" target="_blank" class="book-link">📖 Download PDF</a>
+        </div>
+        <div class="book-item">
+            <h3>All In One Physics ICSE Class 10</h3>
+            <a href="All In One Physics ICSE Class 10_compressed.pdf" target="_blank" class="book-link">📖 Download PDF</a>
+        </div>
             <div class="book-item">
                 <h3>All In One Chemistry ICSE Class 10</h3>
                 <a href="All In One Chemistry ICSE Class 10 2022-23_compressed.pdf" target="_blank" class="book-link">📖 Download PDF</a>
@@ -40,7 +115,7 @@
                 <h3>Oswaal ICSE MCQs Chapterwise Question Bank Class 10</h3>
                 <a href="Oswaal ICSE MCQs Chapterwise Question Bank Class 10, Physics Book (For Semester 1, Nov-Dec 2021 Exam with the largest MCQ Question Pool)_nodrm (1)_compressed.pdf" target="_blank" class="book-link">📖 Download PDF</a>
             </div>
-             <div class="book-item">
+            <div class="book-item">
                 <h3>"All In One History & Civics ICSE Class 10</h3>
                 <a href="All In One History & Civics ICSE Class 10 - THEORY.pdf" target="_blank" class="book-link">📖 Download PDF</a>
             </div>
@@ -62,16 +137,14 @@
           
             <a href="Almond Books PHYSICS Study Guide for ICSE Class 10 for 2024 Exam - Chapterwise & Categorywise Notes, ICSE School Prelims, MCQs, Previous Years Board Questions, Fully Solved_nodrm.pdf" target="_blank" class="book-link">📖 Download PDF</a>
         </div>
-              <div class="book-item">
+        <div class="book-item">
             <h3>Computer Applications Multiple Choice Question</h3>
             <a href="Computer Applications Multiple Choice Question Bank for ICSE Class 10 (Semester-1) Examinations_ for ICSE Class 10. Contains 200+ intellectual MCQS.pdf" target="_blank" class="book-link">📖 Download PDF</a>
-        </div> 
-            <!-- Add more ICSE books as needed -->
-        </div>
+        </div>  <!-- Add more ICSE books as needed -->
+        
     </section>
     <footer>
         <p>&copy; 2024 Nitin Sharma's Education Portal | All Rights Reserved</p>
     </footer>
 </body>
 </html>
-
