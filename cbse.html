@@ -7,29 +7,31 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Georgia', serif;
+            background-image: url('old-books-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #4A3F35;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: rgba(153, 102, 51, 0.8);
+            color: #fff;
             text-align: center;
             padding: 1rem;
+            font-size: 2rem;
         }
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 0.5rem 0;
+            background-color: rgba(102, 51, 0, 0.9);
+            padding: 0.5rem;
+            text-align: center;
         }
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            font-family: 'Georgia', serif;
         }
         nav a:hover {
             text-decoration: underline;
@@ -37,54 +39,53 @@
         .books-list {
             max-width: 800px;
             margin: 2rem auto;
-            background: white;
-            border-radius: 8px;
+            background: rgba(255, 255, 240, 0.9);
+            border-radius: 10px;
             padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .books-list h2 {
             text-align: center;
-            color: #333;
             margin-bottom: 1rem;
+            color: #4A3F35;
+            font-size: 1.8rem;
+            text-shadow: 1px 1px #fff;
         }
         .book-container {
             text-align: center;
             padding: 1rem;
-            border: 2px dashed #4CAF50;
-            border-radius: 8px;
-            background-color: #f9fff9;
+            border: 2px dashed #8B4513;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 240, 0.95);
         }
         .book-container p {
             font-size: 1.2rem;
-            color: #555;
+            margin-bottom: 1rem;
         }
         .book-container a {
             display: inline-block;
-            margin-top: 1rem;
-            padding: 0.8rem 1.5rem;
-            font-size: 1.1rem;
-            color: white;
-            background-color: #4CAF50;
-            border-radius: 5px;
+            padding: 0.6rem 1rem;
+            background-color: #8B4513;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s;
+            border-radius: 5px;
+            transition: 0.3s ease;
         }
         .book-container a:hover {
-            background-color: #45a049;
+            background-color: #A0522D;
         }
         footer {
             text-align: center;
-            margin-top: 2rem;
             padding: 1rem;
-            background-color: #333;
-            color: white;
+            background-color: rgba(102, 51, 0, 0.9);
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>📗 CBSE Books</h1>
+        📗 CBSE Books
     </header>
     <nav>
         <a href="index.html">🏠 Home</a>
@@ -103,7 +104,7 @@
         </div>
     </section>
     <footer>
-        <p>&copy; 2024 Nitin Sharma's Education Portal | All Rights Reserved</p>
+        &copy; 2024 Nitin Sharma's Education Portal | All Rights Reserved
     </footer>
 </body>
 </html>
