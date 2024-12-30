@@ -6,58 +6,146 @@
     <title>Login</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffcf3c, #ff8c42);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
+            animation: fadeIn 1.5s ease;
+            margin: 20px;
+        }
+
+        .container h1, .container h2 {
+            margin-bottom: 20px;
+            font-weight: bold;
             text-align: center;
-            padding: 20px;
+            color: #fff;
         }
+
         form {
-            max-width: 300px;
-            margin: auto;
+            display: flex;
+            flex-direction: column;
         }
+
         label {
-            display: block;
             margin-bottom: 5px;
+            font-weight: bold;
         }
-        input[type="text"], input[type="password"], input[type="email"] {
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            transition: box-shadow 0.3s;
         }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 140, 66, 0.8);
+        }
+
         button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            padding: 12px;
+            background: linear-gradient(135deg, #ff8c42, #ff6347);
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
         }
+
         button:hover {
-            background-color: #45a049;
+            background: linear-gradient(135deg, #ff6347, #ff8c42);
+            transform: translateY(-2px);
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-45deg);
+            transition: left 0.5s;
+        }
+
+        button:hover::before {
+            left: 100%;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: none;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Login</h1>
-    <h2>Admin Login</h2>
-    <form>
-        <label for="google-id">Google ID</label>
-        <input type="email" id="google-id" placeholder="Enter Admin Google ID" required>
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter Admin Password" required>
-        <button type="submit">Login</button>
-    </form>
-    <hr>
-    <h2>User Login</h2>
-    <form>
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter Username" required>
-        <label for="email">Google/Yahoo Account</label>
-        <input type="email" id="email" placeholder="Enter Email" required>
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Set Password" required>
-        <button type="submit">Register/Login</button>
-    </form>
-    <script src="login.js"></script>
+    <div class="container">
+        <h1>Login</h1>
+        <h2>Admin Login</h2>
+        <form>
+            <label for="google-id">Google ID</label>
+            <input type="email" id="google-id" placeholder="Enter Admin Google ID" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Admin Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <hr>
+        <h2>User Login</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <label for="email">Google/Yahoo Account</label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Set Password" required>
+            <button type="submit">Register/Login</button>
+        </form>
+    </div>
 </body>
 </html>
