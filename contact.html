@@ -4,19 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Nitin Sharma's Education Portal</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            animation: fadeInDown 1s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 20px;
+            animation: slideIn 1s ease;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        .contact-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-details, .feedback-form {
+            margin: 20px 0;
+        }
+
+        .contact-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-details p {
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .feedback-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .feedback-form label {
+            font-weight: bold;
+        }
+
+        .feedback-form input, .feedback-form textarea {
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .feedback-form input:focus, .feedback-form textarea:focus {
+            transform: scale(1.05);
+        }
+
+        .feedback-form .submit-btn {
+            padding: 12px 20px;
+            border: none;
+            background: #ffcc00;
+            color: #333;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .feedback-form .submit-btn:hover {
+            background: #ff9900;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.8);
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-icons a {
+            font-size: 1.8rem;
+            color: #fff;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .contact-icons a:hover {
+            color: #ffcc00;
+            transform: rotate(15deg);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>📞 Contact Us</h1>
+        <h1>Contact Us</h1>
     </header>
     <nav>
-        <a href="index.html">🏠 Home</a>
-        <a href="books.html">📚 Books</a>
-        <a href="exams.html">📝 Exams</a>
-         <a href="about.html">About Us</a>
-        <a href="contact.html">📞 Contact Us</a>
-        <a href="login.html">🔑 Login</a>
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="exams.html">Exams</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Login</a>
     </nav>
     <section class="contact-section">
         <h2>We'd Love to Hear From You!</h2>
@@ -32,19 +210,24 @@
                 Devdutt<br>
                 📞 Mobile: 9258826242
             </p>
+            <div class="contact-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
         <div class="feedback-form">
             <h3>Send Us Your Feedback</h3>
             <form action="submit_feedback.php" method="POST">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required placeholder="Enter your name">
-                
+
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email" required placeholder="Enter your email">
-                
+
                 <label for="message">Your Message:</label>
                 <textarea id="message" name="message" required placeholder="Enter your feedback"></textarea>
-                
+
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
         </div>
